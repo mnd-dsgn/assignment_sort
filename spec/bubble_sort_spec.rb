@@ -1,7 +1,8 @@
 require 'bubble_sort'
 
 describe "#bubble_sort" do 
-  let(:array){[1, 5, 7, 4, 4, 4, 19, 290, 123098]}
+  let (:small_array) {[3,2,1]}
+  let(:array){[7, 5, 1, 4, 4, 4, 519, 290, 123098]}
   let(:neg_array){[1, -5, -2, 1, 12, 4098, -39]}
 
   it "returns a sorted array" do 
@@ -13,7 +14,7 @@ describe "#bubble_sort" do
   end
 
   it "returns a sorted array" do 
-    expect(bubble_sort(neg_array)).to eq(neg_array.sort)
+    expect(bubble_sort(small_array)).to eq(small_array.sort)
   end
 
 end
