@@ -18,3 +18,14 @@ describe "#merge_sort" do
   end
 
 end
+
+describe "#merge" do 
+  let (:small_array) {[3,2,1]}
+  let(:array){[7, 5, 1, 4, 4, 4, 519, 290, 123098]}
+  let(:neg_array){[1, -5, -2, 1, 12, 4098, -39]}
+
+  it "given two arrays, returns a single sorted array" do 
+    expect(merge(array, neg_array)).to eq((array + neg_array).sort)
+  end
+
+end

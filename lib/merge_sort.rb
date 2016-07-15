@@ -23,10 +23,26 @@ end
 
 def merge(left_arr, right_arr)
 
-    # // var newArr = [];
+    new_arr = []
 
+    i = 0
+    until left_arr.empty? && right_arr.empty?
+      if left_arr[0].nil?
+        new_arr << right_arr.shift
+      elsif right_arr[0].nil?
+        new_arr << left_arr.shift
+      elsif left_arr[0] < right_arr[0]
+        new_arr << left_arr.shift
+      elsif right_arr[0] < left_arr[0]
+        new_arr << right_arr.shift
+      end
+      print "#{left_arr} #{right_arr}"
+      puts
+    end
+    new_arr
+    puts new_arr
     # // compare leftArr[0] and rightArr[0]
-    # // whichever is smaller, push it onto newArr
+    # // whichever is smaller, push it onto newArr    
 
     # // repeat the process, but don't reuse elements,
     # // until you have pushed all the elements from
