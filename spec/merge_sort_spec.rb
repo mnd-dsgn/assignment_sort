@@ -20,12 +20,12 @@ describe "#merge_sort" do
 end
 
 describe "#merge" do 
-  let (:small_array) {[3,2,1]}
-  let(:array){[7, 5, 1, 4, 4, 4, 519, 290, 123098]}
-  let(:neg_array){[1, -5, -2, 1, 12, 4098, -39]}
+  let(:sorted1) { [-5, 3, 8, 9, 10] }
+  let(:sorted2) { [-8234, -4, 0, 1, 5, 5678] }
+  let(:combo) { sorted1 + sorted2 }
 
   it "given two arrays, returns a single sorted array" do 
-    expect(merge(array, neg_array)).to eq((array + neg_array).sort)
+    expect(merge(sorted1 , sorted2)).to eq(([-5, 3, 8, 9, 10] + [-8234, -4, 0, 1, 5, 5678]).sort)
   end
 
 end
