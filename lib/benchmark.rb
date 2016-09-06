@@ -15,4 +15,4 @@ def time(array, method)
   finish - start
 end
 
-benchmark([3, 6, 2, 7, 234 , -5, 123, 6, 6] * 100)
+benchmark([3, 6, 2, 7, 234 , -5, 123, 6, 6] * 1000)
